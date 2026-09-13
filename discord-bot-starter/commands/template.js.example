@@ -1,0 +1,17 @@
+// COPY THIS FILE when you want to make a new slash command.
+// Rename it to something like commands/test.js
+// IMPORTANT: the file must end in .js to be loaded by the bot.
+
+const { SlashCommandBuilder } = require('discord.js');
+
+module.exports = {
+  // This controls how the command appears in Discord.
+  data: new SlashCommandBuilder()
+    .setName('change-me')
+    .setDescription('Change this description'),
+
+  // This is what happens when someone uses the command.
+  async execute(interaction) {
+    await interaction.reply('Change what I say!');
+  },
+};
